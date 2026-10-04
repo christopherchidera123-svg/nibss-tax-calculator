@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigeria Tax System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="img/png" href="/google_chrome_logo_icon_145233.svg">
+</head>
+<body>
+      
+   <div class="header">
+      <img src="google_chrome_logo_icon_145233.svg"
+       alt="picture"
+       width="5%"
+       height="50%"
+       >
+       <h2>NIBSS INTERNATIONAL </h2>
+       <div class="right">
+          
+             <button>Blog</button>
+           
+             <button>About us</button>
+
+             <button>Contact us</button>
+
+             <button>services</button>
+
+       </div>
+       <a href="login.html">
+        <button id="nothing">Log in</button>
+       </a>
+       <a href="signup.html">
+        <button id="process">Sign up</button>
+       </a>
+   </div>
+           <div class="nile-content">
+               <h3>Nigeria Tax Regulation Conduct 
+                <span>(NTRC)</span>
+                    </h3>
+                   <p>Calculate your 2026 PAYE in minutes. See tax due, take-home, 
+                  <span id="times">and deductions instantly.</span></p>
+                    <p>Need company tax estimates? <a href="https://taxcalc.ng/calculator/business">use our tax
+                       calculator for <br> business.   </a>  </p>
+
+                     <p>For payroll teams: <a href="https://taxcalc.ng/paye-review?source=personal-calculator">
+                         Request pay review.</a>  premium planning. : <br> 
+
+                              <a href="https://taxcalc.ng/dashboard/simulator">Salary simulator/</a>
+                            <a href="https://taxcalc.ng/dashboard/planner">Anual tax Planner</a>
+
+                             <div class="input-period">
+                        <div class="period-toggle" role="group" aria-label="Choose a tax period">
+                                  <button type="button" data-period="monthly" aria-pressed="true">Monthly</button>
+                                <button type="button" data-period="annual" aria-pressed="false">Annual</button>
+                                 </div>
+                             <p id="sport">Calculations are manual <br> 
+                            <span id="sprt"> You can calculate, both annually and montly.</span></p>
+                    </div>
+                                <div class="orphan">
+                                  <p id="remake">Total Anual Income (GROSS) </p>
+                             <input type="text" id="salaries" class="money-input" inputmode="numeric" placeholder="e.g 5,000,000">
+                              </div>
+                                 <hr>
+                                         <h3 id="deduct">Company Expenses (Optional)</h3>
+                                <p id="deduc">Add yearly amounts if you have them for a more accurate estimate. You can leave any category blank.</p>
+                                 <button id="tam" type="button" aria-expanded="false" aria-controls="company-expenses-explanation">What are company expenses?</button>
+                                 <div class="input-periodd" id="company-expenses-explanation" hidden>
+                              <p>Company expenses are the costs a business incures to operate, produce goods or services, serve customers, and grow.</p>
+                                        </div>
+                                  <section class="expense-entry" aria-labelledby="company-expenses-title">
+                                  <h4 id="company-expenses-title">Fill in your company expenses</h4>
+                                  <p class="expense-entry-intro">Enter yearly amounts in naira for each category. These are common operating costs, not a statement that every cost is tax-deductible.</p>
+                                      <div class="expense-grid">
+                                        <label class="expense-field">Staff salaries and wages
+                                      <input class="money-input company-expense-input" type="text" inputmode="numeric" placeholder="e.g. 2,400,000">
+                                       </label>
+                                       <label class="expense-field">Rent and property costs
+                                          <input class="money-input company-expense-input" type="text" inputmode="numeric" placeholder="e.g. 900,000">
+                                           </label>
+                                    <label class="expense-field">Utilities and communications
+                                     <input class="money-input company-expense-input" type="text" inputmode="numeric" placeholder="e.g. 360,000">
+                                          </label>
+                                          <label class="expense-field">Inventory, materials and supplies
+                                      <input class="money-input company-expense-input" type="text" inputmode="numeric" placeholder="e.g. 1,200,000">
+                                      </label>
+                                         <label class="expense-field">Transport and logistics
+                              <input class="money-input company-expense-input" type="text" inputmode="numeric" placeholder="e.g. 240,000">
+                            </label>
+                            <label class="expense-field">Repairs and maintenance
+                  <input class="money-input company-expense-input" type="text" inputmode="numeric" placeholder="e.g. 120,000">
+                         </label>
+                    <label class="expense-field">Professional and accounting fees
+                             <input class="money-input company-expense-input" type="text" inputmode="numeric" placeholder="e.g. 180,000">
+                        </label>
+                         <label class="expense-field">Insurance
+                             <input class="money-input company-expense-input" type="text" inputmode="numeric" placeholder="e.g. 100,000">
+                         </label>
+                        <label class="expense-field">Marketing and advertising
+                       <input class="money-input company-expense-input" type="text" inputmode="numeric" placeholder="e.g. 150,000">
+                            </label>
+                        <label class="expense-field">Other operating expenses
+                     <input class="money-input company-expense-input" type="text" inputmode="numeric" placeholder="e.g. 80,000">
+                 </label>
+                     </div>
+                <button id="calculate-tax" type="button" hidden>Calculate my tax</button>
+                <p id="tax-results" class="tax-results" role="status" aria-live="polite" hidden></p>
+                </section>
+           </div>
+           <div class="result-content">
+             <button id="abidoshaka">Result review </button>
+              <div class="ability" id="result-display">
+                <img src="1492617369-7-docs-document-file-data-google-suits_83427.svg" alt="" width="60%">
+              </div>
+              <h3 id="yala">Your result will be displayed here</h3>
+              <p id="laya">Fill the form,, instantely to see your TAX breakdown</p>
+              <div id="please">
+               <h5 id="tax"> TOTAL TAX</h5>
+               <div class="progress-track" aria-label="Tax loading indicator">
+                 <span id="kook"></span>
+                 <span id="keek"></span>
+               </div>
+               </div>
+               <div id="safe">
+               <h5 id="tax"> TAKE_HOME</h5>
+               <div class="progress-track" aria-label="Tax loading indicator">
+                 <span id="kok"></span>
+                 <span id="kek"></span>
+               </div>
+               </div>
+               <div id="lease">
+               <h5 id="tax"> DEDUCTION</h5>
+               <div class="progress-track" aria-label="Tax loading indicator">
+                 <span id="kolk"></span>
+                 <span id="kelk"></span>
+               </div>
+               </div>
+               <button id="abido">Patnered by corridor </button>
+               <button id="abid">Anual+montly review </button>
+               <button id="abdo">Relief included </button>
+
+              <div id="analysis-panel" aria-live="polite">
+                <div class="analysis-card">
+                  <div class="analysis-header">
+                    <p class="eyebrow">Tax analysis</p>
+                    <button type="button" id="reset-result" class="mini-button">Back to result</button>
+                  </div>
+
+                  <h3 class="analysis-title">Detailed tax ledger</h3>
+
+                  <div class="result-metrics">
+                    <div class="metric-box">
+                      <span>Gross income</span>
+                      <strong id="gross-income-value">₦0</strong>
+                    </div>
+                    <div class="metric-box">
+                      <span>Tax due</span>
+                      <strong id="tax-due-value">₦0</strong>
+                    </div>
+                    <div class="metric-box">
+                      <span>Company expense</span>
+                      <strong id="company-expense-value">₦0</strong>
+                    </div>
+                    <div class="metric-box">
+                      <span>Take-home pay</span>
+                      <strong id="take-home-value">₦0</strong>
+                    </div>
+                  </div>
+
+                  <div class="ledger-wrap">
+                    <h4>Ledger summary</h4>
+                    <table class="ledger-table">
+                      <tr>
+                        <th>Gross annual income</th>
+                        <td id="ledger-gross">₦0</td>
+                      </tr>
+                      <tr>
+                        <th>Company expense reduction</th>
+                        <td id="ledger-expense">₦0</td>
+                      </tr>
+                      <tr>
+                        <th>Taxable income</th>
+                        <td id="ledger-taxable">₦0</td>
+                      </tr>
+                      <tr>
+                        <th>Effective tax rate</th>
+                        <td id="ledger-rate">0%</td>
+                      </tr>
+                      <tr>
+                        <th>Tax due</th>
+                        <td id="ledger-tax">₦0</td>
+                      </tr>
+                      <tr>
+                        <th>Take-home pay</th>
+                        <td id="ledger-takehome">₦0</td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <div class="receipt-box">
+                    <div class="receipt-actions">
+                      <button type="button" id="keep-result" class="primary-btn">Keep this result</button>
+                      <a href="login.html" class="secondary-btn">Log in</a>
+                      <a href="signup.html" class="secondary-btn">Sign up</a>
+                    </div>
+                    <div class="receipt-actions" style="margin-top: 12px;">
+                      <button type="button" id="generate-pdf" class="paid-btn">Generate PDF (₦1,000)</button>
+                    </div>
+                    <p class="status-note" id="status-note"></p>
+                  </div>
+
+                  <div class="help-links">
+                    <a href="#corridor-info">Who is Corridor?</a>
+                    <a href="#result-steps">How do we get to the result?</a>
+                  </div>
+
+                  <div id="corridor-info" style="margin-top: 10px; font-size: 14px; color: #234730;">
+                    Corridor is the tax and payroll support partner for this calculator. It helps people review their tax status and understand the numbers quickly.
+                  </div>
+
+                  <div id="result-steps" style="margin-top: 10px; font-size: 14px; color: #234730;">
+                    To get the result, enter your income, add any company expenses, click Calculate, and the system will show your tax ledger and receipt options.
+                  </div>
+                </div>
+              </div>
+              </div>
+           
+<script src="java.js"></script>
+</body>
+</html>

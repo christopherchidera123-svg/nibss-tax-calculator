@@ -1,0 +1,986 @@
+  *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            background-color: rgb(243, 245, 242);
+            font-family: Inter, "Inter Fallback", ui-sans-serif, system-ui, sans-serif, 
+            "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+        .header {
+            display: flex;
+            position: sticky;
+            z-index: 1500;
+            top: 0%;
+            width: 100%;
+            height: 10vh;
+            margin-top: -1%;
+            background-color: rgb(255,255,255);
+            box-shadow: 0 2px 6px rgb(0 0 0 / 20%);
+        }
+        .header img{
+            margin-top: 2%;
+        }
+        .header h2{
+            margin-left: 0%;
+            margin-top: 2.5%;
+            color: rgb(18, 20, 24);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .right {
+           width: 28%;
+           border-radius: 12px;
+           height: 6vh;
+           background: #fff;
+           padding: 1px 7px;
+           border: none;
+           box-shadow: 0 2px 6px rgb(0 0 0 / 18%);
+           margin-left: 25%;
+           margin-top: 1.5%;
+        }
+        .right button {
+            padding: 1px 10px;
+            width: 21%;
+            height: 4vh;
+            margin-top: 1.5%;
+            border: 1px solid transparent;
+            margin-left: 3%;
+            border-radius: 10px;
+            background: none;
+            font-size: 12px ;
+            border-width: 1px ;
+            font-family: Inter, "Inter Fallback", ui-sans-serif, system-ui, sans-serif, 
+            "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            cursor: pointer;
+            transition: background-color 180ms ease, border-color 180ms ease,
+                box-shadow 180ms ease, transform 180ms ease;
+        }
+        .right button:hover {
+            background-color: rgb(250, 253, 252);
+            border-color: rgb(3, 108, 68);
+            box-shadow: 0 3px 8px rgb(0 0 0 / 16%);
+            transform: translateY(-2px);
+        }
+        .right button:focus-visible {
+            outline: 2px solid rgb(3, 108, 68);
+            outline-offset: 2px;
+        }
+    
+        #nothing {
+           padding: 1px 10px;
+           margin-top: 55%;
+           margin-left: 40%;
+           width: 130%;
+           height: 5vh;
+           border: 1px solid transparent;
+           border-radius: 20px;
+           font-family: Inter, "Inter Fallback", ui-sans-serif, system-ui, sans-serif, 
+           "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+           cursor: pointer;
+            transition: background-color 180ms ease, border-color 180ms ease,
+                box-shadow 180ms ease, transform 180ms ease;
+        }
+        #nothing:hover {
+            background-color: rgb(246, 248, 247);
+            border-color: rgb(3, 108, 68);
+            box-shadow: 0 3px 8px rgb(0 0 0 / 16%);
+            transform: translateY(-2px);
+        }
+        #nothing :focus-visible {
+            outline: 2px solid rgb(3, 108, 68);
+            outline-offset: 2px;
+        }
+        #process {
+           padding: 1px 10px;
+           margin-top: 45%;
+           margin-left: 70%;
+           width: 130%;
+           height: 5vh;
+           border: none;
+           color: rgb(255,255,255);
+           background-color: rgb(3, 108, 68);
+           border-radius: 20px;
+           cursor: pointer;
+           transition: background-color 180ms ease, border-color 180ms ease,
+           box-shadow 180ms ease, transform 180ms ease;
+           font-family: Inter, "Inter Fallback", ui-sans-serif, system-ui, sans-serif,
+           "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+        #process:hover{
+             background-color: rgb(3, 77, 39);
+        }
+        .nile-content {
+            display: inline-block;
+            vertical-align: top;
+            width: 37%;
+            min-height: 165vh;
+            height: auto;
+            padding: 3vh 24px 32px;
+            background-color: rgb(255,255,255);
+            box-shadow: 0 2px 6px rgb(0 0 0 / 7%);
+            margin-top: 5vh;
+            margin-left: 13%;
+            border-radius: 13px;
+        }
+        .result-content {
+            position: sticky;
+            top: calc(16vh + 12px);
+            display: inline-block;
+            vertical-align: top;
+            width: 37%;
+            min-height: 55vh;
+            height: auto;
+            padding-top: 3vh;
+            margin: 5vh 0 0 1%;
+            margin-left: 4%;
+            border-radius: 13px;
+            margin-top: 4%;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 2px 6px rgb(0 0 0 / 7%);
+        }
+        .nile-content h3 {
+            font-size: 30px;
+            line-height: 1.2;
+            font-weight: 600;
+            color: rgb(18, 20, 24);
+            margin-left: 8%;
+            font-family: Inter, "Inter Fallback", ui-sans-serif, system-ui, sans-serif, 
+            "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ;
+        }
+        .nile-content h3 span {
+            font-size: 23px;
+            margin-left: 35%;
+        }
+        .nile-content p, 
+        #times{
+           font-family: Inter, "Inter Fallback", ui-sans-serif, system-ui, sans-serif, 
+           "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+           line-height: 24px;
+           font-size: 15px;
+           font-weight: 400;
+           cursor: pointer;
+           margin-left: 25%;
+        }
+        .nile-content p{
+            margin: 14px 0;
+            margin-left: 8%;
+        }
+        .nile-content a{
+            color: rgb(3, 108, 68);
+            text-decoration: none;
+        }
+        .nile-content a:hover{
+            color: rgb(3, 77, 39);
+        }
+        .input-period {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            width: 100%;
+            background-color: rgb(247, 249, 246);
+            margin: 24px 0;
+            padding: 16px;
+            border-radius: 14px;
+            box-shadow: 0 2px 6px rgb(0 0 0 / 9%);
+        }
+        .period-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            margin: 0;
+            padding: 4px;
+            min-height: 40px;
+            border: 1px solid rgb(220, 225, 220);
+            border-radius: 13px;
+            background: rgb(255, 255, 255);
+        }
+        .period-toggle button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            min-width: 10px;
+            min-height: 30px;
+            justify-content: center;
+            padding: 0 14px;
+            border: 0;
+            border-radius: 13px;
+            background: transparent;
+            color: rgb(65, 72, 67);
+            font: inherit;
+            cursor: pointer;
+        }
+        .period-toggle button::before {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgb(175, 182, 176);
+            content: "";
+        }
+        .period-toggle button[aria-pressed="true"] {
+            background: rgb(229, 244, 235);
+            color: rgb(3, 108, 68);
+            font-weight: 600;
+        }
+        .period-toggle button[aria-pressed="true"]::before {
+            background: rgb(3, 160, 87);
+            box-shadow: 0 0 0 3px rgb(3 160 87 / 15%);
+        }
+        .period-toggle button:focus-visible {
+            outline: 2px solid rgb(3, 108, 68);
+            outline-offset: 2px;
+        }
+        #sport,
+        #sprt{
+            font-size: 13px;
+           font-family: Inter, "Inter Fallback", ui-sans-serif, system-ui, sans-serif, 
+           "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+        #sport {
+            flex: 1;
+            margin: 0;
+        }
+        #sprt{
+            margin: 0;
+            font-size: 14px;
+        }
+        #remake {
+            font-size: 12px;
+            margin: 22px 0 8px;
+           font-family: Inter, "Inter Fallback", ui-sans-serif, system-ui, sans-serif, 
+           "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+        .orphan input{
+            width: 100%;
+            min-height: 60px;
+            margin: 0;
+            padding: 0 14px;
+            background-color: rgb(247, 249, 246);
+            border: none;
+            border-radius: 7px;
+            font-size: 17px;
+        }
+        hr{
+            width: 100%;
+            height: 1px;
+            margin: 24px 0;
+            border: 0;
+            background-color:  rgb(247, 249, 246);
+        }
+        #deduct{
+            font-size: 20px;
+               margin: 26px 0 6px;
+           font-family: Inter, "Inter Fallback", ui-sans-serif, system-ui, sans-serif, 
+           "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+           margin-left: 0;
+           font-weight: 500;
+        }
+        #deduc{
+            font-size: 12px;
+            font-family: Inter, "Inter Fallback", ui-sans-serif, system-ui, sans-serif, 
+           "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+           margin: 0;
+           font-weight: 500;
+        }
+        #tam{
+              display: flex;
+              align-items: center;
+              gap: 8px;
+            font-family: Inter, "Inter Fallback", ui-sans-serif, system-ui, sans-serif, 
+           "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+              margin: 14px 0 0;
+              padding: 8px 0;
+              border: 0;
+              background: transparent;
+              color: rgb(3, 108, 68);
+              font-weight: 600;
+           font-size: 15px;
+              cursor: pointer;
+          }
+          #tam::after {
+              content: "+";
+              font-size: 20px;
+              line-height: 1;
+          }
+          #tam[aria-expanded="true"]::after {
+              content: "-";
+          }
+          #tam:focus-visible {
+              outline: 2px solid rgb(3, 108, 68);
+              outline-offset: 3px;
+        }
+        .input-periodd {
+                width: 100%;
+                margin: 8px 0 0;
+                padding: 16px 18px;
+                border-left: 3px solid rgb(3, 108, 68);
+                border-radius: 4px;
+                background-color: rgb(247, 249, 246);
+        }
+          .input-periodd[hidden] {
+                display: none;
+          }
+          .input-periodd p {
+            font-family: Inter, "Inter Fallback", ui-sans-serif, system-ui, sans-serif, 
+            "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+                margin: 0;
+                color: rgb(65, 72, 67);
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.6;
+        }
+        .expense-entry {
+            width: 100%;
+            margin: 22px 0 0;
+            padding-top: 18px;
+            border-top: 1px solid rgb(220, 225, 220);
+        }
+        .expense-entry h4 {
+            margin: 0;
+            color: rgb(18, 20, 24);
+            font-size: 18px;
+        }
+        .expense-entry-intro {
+            margin: 6px 0 16px;
+            color: rgb(86, 94, 88);
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        .expense-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px 18px;
+        }
+        .expense-field {
+            display: grid;
+            gap: 6px;
+            color: rgb(45, 52, 47);
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .expense-field input {
+            width: 100%;
+            min-height: 42px;
+            padding: 0 12px;
+            border: 1px solid rgb(204, 212, 205);
+            border-radius: 6px;
+            background: rgb(255, 255, 255);
+            color: rgb(18, 20, 24);
+            font: inherit;
+            font-weight: 400;
+        }
+        .expense-field input:focus-visible {
+            outline: 2px solid rgb(3, 108, 68);
+            outline-offset: 2px;
+        }
+        #calculate-tax {
+            width: 100%;
+            height: 6vh;
+            margin-top: 29px;
+            padding: 0 24px;
+            border: 0;
+            border-radius: 7px;
+            background: rgb(3, 108, 68);
+            color: rgb(255, 255, 255);
+            font: inherit;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        #calculate-tax:hover {
+            background: rgb(3, 77, 39);
+        }
+        #calculate-tax:focus-visible {
+            outline: 2px solid rgb(3, 108, 68);
+            outline-offset: 3px;
+        }
+        #calculate-tax[hidden] {
+            display: none;
+        }
+        #calculate-tax:disabled {
+            cursor: wait;
+            opacity: 0.8;
+        }
+        .tax-results {
+            margin: 14px 0 0;
+            padding: 14px 16px;
+            border-left: 3px solid rgb(3, 108, 68);
+            border-radius: 4px;
+            background: rgb(247, 249, 246);
+            color: rgb(45, 52, 47);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .tax-results[hidden] {
+            display: none;
+        }
+        #abidoshaka {
+            padding: 1px 10px;
+            width: 27%;
+            height: 4cqh;
+            border: 1px solid green;
+            margin-left: 9%;
+            border-radius: 10px;
+            background: none;
+            font-weight: 600 bold;
+            font-size: 14px ;
+            letter-spacing: 3px;
+            color: green;
+            font-family: Inter, "Inter Fallback", ui-sans-serif, system-ui, sans-serif, 
+            "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+        .ability {
+            width: 11%;
+            height: 6vh;
+            background-color: rgb(238, 243, 240);
+            margin-left: 45%;
+            border-radius: 13px;
+            box-shadow: 0 10px 6px rgb(232, 242, 237);
+            margin-top: 13%;
+        }
+        .ability img{
+            margin-top: 10%;
+            margin-left: 19%;
+        }
+        #yala {
+            font-size: 19px;
+            font-family: Inter, "Inter Fallback", ui-sans-serif, system-ui, sans-serif, 
+            "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            margin-top: 7%;
+            margin-left: 23%;
+        }
+        #laya {
+             font-size: 15px;
+            font-family: Inter, "Inter Fallback", ui-sans-serif, system-ui, sans-serif, 
+            "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            margin-left: 18%;
+        }
+        #please {
+            width: 30%;
+            background-color: rgb(238, 243, 240);
+            margin-left: 2%;
+            border-radius: 13px;
+            box-shadow: 0 10px 6px rgb(232, 242, 237);
+            margin-top: 10%;
+            border: none;
+            padding: 10px 12px;
+            box-sizing: border-box;
+        }
+        #safe {
+            width: 30%;
+            background-color: rgb(238, 243, 240);
+            margin-left: 35%;
+            border-radius: 13px;
+            box-shadow: 0 10px 6px rgb(232, 242, 237);
+            border: none;
+            margin-top: -10%;
+            padding: 10px 12px;
+            box-sizing: border-box;
+        }
+        #lease {
+            width: 30%;
+            background-color: rgb(238, 243, 240);
+            margin-left: 68%;
+            border-radius: 13px;
+            box-shadow: 0 10px 6px rgb(232, 242, 237);
+            margin-top: -10%;
+            border: none;
+            padding: 10px 12px;
+            box-sizing: border-box;
+        }
+        #tax {
+            margin: 0 0 8px;
+            text-align: center;
+            font-size: 13px;
+            font-family: Inter, "Inter Fallback", ui-sans-serif, system-ui, sans-serif, 
+            "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+        .progress-track {
+            width: 100%;
+            height: 12px;
+            border-radius: 999px;
+            background: #ffffff;
+            overflow: hidden;
+            display: flex;
+            box-shadow: inset 0 0 0 1px #dfe9e1;
+        }
+    
+        #kook {
+            width: 70%;
+            height: 100%;
+            border: none;
+            background: #a2caa5;
+            display: block;
+        }
+        #keek {
+            width: 30%;
+            height: 100%;
+            border: none;
+            background: #ffffff;
+            display: block;
+        }
+
+        #kok {
+            width: 80%;
+            height: 100%;
+            border: none;
+            background: #a2caa5;
+            display: block;
+        }
+        #kek {
+            width: 20%;
+            height: 100%;
+            border: none;
+            background: #ffffff;
+            display: block;
+        }
+        #kolk {
+            width: 25%;
+            height: 100%;
+            border: none;
+            background: #a2caa5;
+            display: block;
+        }
+        #kelk {
+            width: 75%;
+            height: 100%;
+            border: none;
+            background: #ffffff;
+            display: block;
+        }
+        #abido{
+            padding: 1px 1px;
+            width: 25%;
+            height: 3cqb;
+            border: 1px solid green;
+            margin-left: 5%;
+            margin-top: 6%;
+            border-radius: 10px;
+            background: none;
+            font-weight: 600 bold;
+            font-size: 10px ;
+            letter-spacing: 1px;
+            color: green;
+            font-family: Inter, "Inter Fallback", ui-sans-serif, system-ui, sans-serif, 
+            "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+        #abid{
+            width: 24%;
+            height: 3cqh;
+            border: 1px solid rgb(203, 209, 203);
+            margin-left: 9%;
+            border-radius: 10px;
+            background: none;
+            font-weight: 600 bold;
+            font-size: 8px ;
+            letter-spacing: 1px;
+            color: rgb(191, 200, 191);
+            font-family: Inter, "Inter Fallback", ui-sans-serif, system-ui, sans-serif, 
+            "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+        #abdo {
+            width: 20%;
+            height: 3cqh;
+            border: 1px solid rgb(203, 209, 203);
+            margin-left: 9%;
+            border-radius: 10px;
+            background: none;
+            font-weight: 600 bold;
+            font-size: 10px ;
+            letter-spacing: 1px;
+            color: rgb(191, 200, 191);
+            font-family: Inter, "Inter Fallback", ui-sans-serif, system-ui, sans-serif, 
+            "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+        .result-content.report-mode .ability,
+        .result-content.report-mode #yala,
+        .result-content.report-mode #laya,
+        .result-content.report-mode #please,
+        .result-content.report-mode #safe,
+        .result-content.report-mode #lease,
+        .result-content.report-mode #abido,
+        .result-content.report-mode #abid,
+        .result-content.report-mode #abdo {
+            display: none;
+        }
+
+        #analysis-panel {
+            display: none;
+            width: 100%;
+            margin-top: 18px;
+            background: #f7faf7;
+            border: 1px solid #dfe9e1;
+            border-radius: 18px;
+            padding: 18px;
+            box-sizing: border-box;
+        }
+
+        #analysis-panel.visible {
+            display: block;
+        }
+
+        .analysis-card {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .analysis-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .eyebrow {
+            margin: 0;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #3d7d52;
+            font-weight: 700;
+        }
+
+        .mini-button {
+            background: #ebf4ee;
+            color: #1d5c32;
+            border: 1px solid #cfe1d4;
+            border-radius: 10px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .analysis-title {
+            margin: 0;
+            font-size: 22px;
+            color: #1b2e1d;
+        }
+
+        .result-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(120px, 1fr));
+            gap: 14px;
+        }
+
+        .metric-box {
+            background: #ffffff;
+            border: 1px solid #e3ebdf;
+            border-radius: 12px;
+            padding: 12px;
+        }
+
+        .metric-box span {
+            display: block;
+            font-size: 12px;
+            color: #58715d;
+            margin-bottom: 6px;
+        }
+
+        .metric-box strong {
+            font-size: 18px;
+            color: #163a22;
+        }
+
+        .ledger-wrap {
+            background: #fff;
+            border: 1px solid #e2eae2;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .ledger-wrap h4 {
+            margin: 0;
+            padding: 14px 18px;
+            background: #eef7f0;
+            border-bottom: 1px solid #e1ebdf;
+            color: #204c2f;
+        }
+
+        .ledger-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .ledger-table th,
+        .ledger-table td {
+            padding: 12px 18px;
+            text-align: left;
+            border-bottom: 1px solid #edf1ee;
+            font-size: 14px;
+        }
+
+        .ledger-table th {
+            background: #fbfdfb;
+            color: #355e42;
+            width: 45%;
+        }
+
+        .ledger-table td {
+            color: #203329;
+        }
+
+        .receipt-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .primary-btn,
+        .secondary-btn,
+        .paid-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            border-radius: 12px;
+            padding: 11px 16px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.2s ease;
+        }
+
+        .primary-btn {
+            background: #2a8a47;
+            color: white;
+        }
+
+        .secondary-btn {
+            background: #edf5ef;
+            color: #19472d;
+            border: 1px solid #d3e7d7;
+        }
+
+        .paid-btn {
+            background: #fff0c7;
+            color: #6d4a00;
+            border: 1px solid #f3d787;
+        }
+
+        .help-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 14px;
+            margin-top: 6px;
+        }
+
+        .help-links a {
+            color: #275c39;
+            text-decoration: underline;
+        }
+
+        .status-note {
+            margin-top: 8px;
+            color: #265d3a;
+            font-weight: 600;
+            min-height: 20px;
+        }
+
+        @media (max-width: 1200px) {
+            .header {
+                height: auto;
+                padding: 12px 16px;
+                flex-wrap: wrap;
+                gap: 12px;
+                align-items: center;
+            }
+
+            .header img {
+                margin-top: 0;
+                width: 42px;
+                height: 42px;
+            }
+
+            .header h2 {
+                margin: 0;
+                font-size: 1.2rem;
+                flex: 1;
+            }
+
+            .right {
+                width: 100%;
+                margin: 0;
+                order: 3;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: 8px;
+            }
+
+            .right button {
+                margin: 0 6px;
+                width: auto;
+                min-width: 80px;
+            }
+
+            .nile-content,
+            .result-content {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+
+            .nile-content {
+                min-height: auto;
+            }
+
+            .result-content {
+                position: static;
+                margin-top: 24px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .header {
+                justify-content: space-between;
+            }
+
+            .header h2 {
+                font-size: 1rem;
+            }
+
+            #nothing,
+            #process {
+                margin: 0;
+                width: auto;
+                min-width: 110px;
+                height: 42px;
+            }
+
+            .nile-content,
+            .result-content {
+                width: 92%;
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+            .expense-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #please,
+            #safe,
+            #lease {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 16px;
+            }
+
+            #safe,
+            #lease {
+                margin-top: 16px;
+            }
+
+            #abidoshaka,
+            #abido,
+            #abid,
+            #abdo {
+                width: auto;
+                min-width: 120px;
+                margin: 12px 8px 0 0;
+                font-size: 10px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                padding: 12px 14px;
+                gap: 10px;
+            }
+
+            .header h2 {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+
+            .right {
+                justify-content: flex-start;
+            }
+
+            .right button {
+                flex: 1 1 calc(50% - 10px);
+                min-width: 0;
+                font-size: 11px;
+            }
+
+            .nile-content,
+            .result-content {
+                width: 94%;
+                padding: 18px 14px;
+            }
+
+            .nile-content h3 {
+                font-size: 1.6rem;
+                margin-left: 0;
+            }
+
+            .nile-content h3 span {
+                display: block;
+                margin-left: 0;
+                margin-top: 6px;
+                font-size: 1.1rem;
+            }
+
+            .nile-content p,
+            #times {
+                margin-left: 0;
+                font-size: 14px;
+            }
+
+            .input-period {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .period-toggle {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .period-toggle button {
+                flex: 1;
+                min-width: 0;
+            }
+
+            #sport,
+            #sprt {
+                font-size: 12px;
+                line-height: 1.5;
+            }
+
+            .analysis-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .result-metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .receipt-actions {
+                flex-direction: column;
+            }
+
+            .primary-btn,
+            .secondary-btn,
+            .paid-btn {
+                width: 100%;
+            }
+
+            .ability {
+                width: 80px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #yala,
+            #laya {
+                margin-left: 0;
+                text-align: center;
+            }
+        }
